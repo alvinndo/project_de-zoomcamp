@@ -1,3 +1,6 @@
 # From 01-ingestion
 01-ingestion/.ipynb_checkpoints
 .DS_Store
+
+# From 02-terraform
+02-terraform/.terraform
