@@ -63,6 +63,15 @@ In the screenshot below:
 * Finally, run `gcs_to_bq_dag`.
 ![alt text](./img/airflow.png)
 
+Below is a view of the tasks for each dag above:
+
+`data_ingestion_gcp_dag`
+
+![alt text](./img/dag1.png)
+
+`gcs_to_bq_dag`
+
+![alt text](./img/dag2.png)
 ## 5. Create your dashboard
 * Go to [Google Data Studio](https://datastudio.google.com) 
 * Click `Create` > `Data Source`
