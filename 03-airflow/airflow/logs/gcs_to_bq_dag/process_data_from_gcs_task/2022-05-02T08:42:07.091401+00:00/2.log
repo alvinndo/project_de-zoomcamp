@@ -1,0 +1,28 @@
+[2022-05-02 15:36:01,611] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:42:07.091401+00:00 [queued]>
+[2022-05-02 15:36:01,652] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:42:07.091401+00:00 [queued]>
+[2022-05-02 15:36:01,654] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:36:01,655] {taskinstance.py:1239} INFO - Starting attempt 2 of 3
+[2022-05-02 15:36:01,656] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:36:01,701] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): process_data_from_gcs_task> on 2022-05-02 08:42:07.091401+00:00
+[2022-05-02 15:36:01,711] {standard_task_runner.py:52} INFO - Started process 25322 to run task
+[2022-05-02 15:36:01,720] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'process_data_from_gcs_task', 'manual__2022-05-02T08:42:07.091401+00:00', '--job-id', '1038', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmpd1pv8vea', '--error-file', '/tmp/tmps90sw4gl']
+[2022-05-02 15:36:01,723] {standard_task_runner.py:77} INFO - Job 1038: Subtask process_data_from_gcs_task
+[2022-05-02 15:36:02,046] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:42:07.091401+00:00 [running]> on host 98c324cf1bb6
+[2022-05-02 15:36:02,393] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=process_data_from_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T08:42:07.091401+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T08:42:07.091401+00:00
+[2022-05-02 15:43:43,681] {local_task_job.py:212} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-05-02 15:43:43,701] {process_utils.py:124} INFO - Sending Signals.SIGTERM to group 25322. PIDs of all processes in the group: [25324, 25343, 25345, 25322]
+[2022-05-02 15:43:43,704] {process_utils.py:75} INFO - Sending the signal Signals.SIGTERM to group 25322
+[2022-05-02 15:43:43,714] {taskinstance.py:1408} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-02 15:43:44,000] {process_utils.py:70} INFO - Process psutil.Process(pid=25324, status='terminated', started='15:36:02') (25324) terminated with exit code None
+[2022-05-02 15:43:44,003] {process_utils.py:70} INFO - Process psutil.Process(pid=25322, status='terminated', exitcode=0, started='15:36:01') (25322) terminated with exit code 0
+[2022-05-02 15:43:44,005] {process_utils.py:70} INFO - Process psutil.Process(pid=25343, status='terminated', started='15:36:02') (25343) terminated with exit code None
+[2022-05-02 15:43:52,120] {local_task_job.py:82} ERROR - Received SIGTERM. Terminating subprocesses
+[2022-05-02 15:43:52,126] {standard_task_runner.py:135} ERROR - Job 1038 was killed before it finished (likely due to running out of memory)
+[2022-05-02 15:43:52,138] {local_task_job.py:154} INFO - Task exited with return code 143

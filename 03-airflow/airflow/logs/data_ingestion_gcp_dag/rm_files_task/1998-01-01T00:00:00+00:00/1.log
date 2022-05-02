@@ -1,0 +1,54 @@
+[2022-04-28 06:04:29,364] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:04:29,412] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:04:29,414] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:04:29,415] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-28 06:04:29,416] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:04:29,462] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): rm_files_task> on 1998-01-01 00:00:00+00:00
+[2022-04-28 06:04:29,474] {standard_task_runner.py:52} INFO - Started process 1596 to run task
+[2022-04-28 06:04:29,486] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'rm_files_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '520', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp54df76wd', '--error-file', '/tmp/tmpmfr2xn03']
+[2022-04-28 06:04:29,500] {standard_task_runner.py:80} INFO - Job 520: Subtask rm_files_task
+[2022-04-28 06:04:29,920] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host d4721d223bdd
+[2022-04-28 06:04:30,256] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 06:04:30,443] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=rm_files_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-28 06:04:30,447] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-28 06:04:30,449] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'rm /opt/***/laucnty98.xlsx /opt/***/us_employment_98.parquet']
+[2022-04-28 06:04:30,466] {subprocess.py:85} INFO - Output:
+[2022-04-28 06:04:30,536] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-28 06:04:30,757] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=rm_files_task, execution_date=19980101T000000, start_date=20220428T060429, end_date=20220428T060430
+[2022-04-28 06:04:30,827] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 06:04:31,062] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-29 02:34:17,489] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:34:17,533] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:34:17,535] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:34:17,536] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-29 02:34:17,537] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:34:17,581] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): rm_files_task> on 1998-01-01 00:00:00+00:00
+[2022-04-29 02:34:17,591] {standard_task_runner.py:52} INFO - Started process 5095 to run task
+[2022-04-29 02:34:17,599] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'rm_files_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '695', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpztok1y2x', '--error-file', '/tmp/tmpslce6708']
+[2022-04-29 02:34:17,603] {standard_task_runner.py:80} INFO - Job 695: Subtask rm_files_task
+[2022-04-29 02:34:17,970] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.rm_files_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 6fd0ba274d58
+[2022-04-29 02:34:18,207] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-29 02:34:18,384] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=rm_files_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-29 02:34:18,389] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-29 02:34:18,406] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'rm /opt/***/laucnty98.xlsx /opt/***/us_employment_1998.parquet']
+[2022-04-29 02:34:18,422] {subprocess.py:85} INFO - Output:
+[2022-04-29 02:34:18,482] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-29 02:34:18,673] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=rm_files_task, execution_date=19980101T000000, start_date=20220429T023417, end_date=20220429T023418
+[2022-04-29 02:34:18,748] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-29 02:34:19,113] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

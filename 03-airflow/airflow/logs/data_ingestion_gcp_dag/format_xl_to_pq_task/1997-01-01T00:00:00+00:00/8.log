@@ -1,0 +1,42 @@
+[2022-04-25 07:10:54,832] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 07:10:54,878] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 07:10:54,880] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 07:10:54,881] {taskinstance.py:1250} INFO - Starting attempt 8 of 9
+[2022-04-25 07:10:54,882] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 07:10:54,930] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 1997-01-01 00:00:00+00:00
+[2022-04-25 07:10:54,939] {standard_task_runner.py:52} INFO - Started process 1686 to run task
+[2022-04-25 07:10:54,948] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__1997-01-01T00:00:00+00:00', '--job-id', '326', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpalky7dk5', '--error-file', '/tmp/tmpb0w2pzsa']
+[2022-04-25 07:10:54,951] {standard_task_runner.py:80} INFO - Job 326: Subtask format_xl_to_pq_task
+[2022-04-25 07:10:55,316] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [running]> on host 64c7187bd08f
+[2022-04-25 07:10:55,533] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-25 07:10:55,702] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=1997-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1997-01-01T00:00:00+00:00
+[2022-04-25 07:10:55,705] {logging_mixin.py:109} INFO - reading excel
+[2022-04-25 07:11:01,050] {logging_mixin.py:109} INFO - dropping stuff
+[2022-04-25 07:11:01,080] {logging_mixin.py:109} INFO - renaming columns
+[2022-04-25 07:11:01,082] {logging_mixin.py:109} INFO - combining fips
+[2022-04-25 07:11:01,092] {logging_mixin.py:109} INFO - updating year and rate
+[2022-04-25 07:11:01,122] {logging_mixin.py:109} INFO - writing to pq
+[2022-04-25 07:11:01,125] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 61, in format_xl_to_pq
+    pq.write_table(df, src_file.replace('.xlsx', '.parquet'))
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/parquet.py", line 2018, in write_table
+    where, table.schema,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 5487, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'schema'
+[2022-04-25 07:11:01,249] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=19970101T000000, start_date=20220425T071054, end_date=20220425T071101
+[2022-04-25 07:11:01,302] {standard_task_runner.py:98} ERROR - Failed to execute job 326 for task format_xl_to_pq_task ('DataFrame' object has no attribute 'schema'; 1686)
+[2022-04-25 07:11:01,331] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-25 07:11:01,579] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,42 @@
+[2022-04-29 02:21:06,095] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_csv_task scheduled__2006-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:21:06,143] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_csv_task scheduled__2006-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:21:06,145] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:21:06,146] {taskinstance.py:1250} INFO - Starting attempt 3 of 4
+[2022-04-29 02:21:06,148] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:21:06,196] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_xl_to_csv_task> on 2006-01-01 00:00:00+00:00
+[2022-04-29 02:21:06,206] {standard_task_runner.py:52} INFO - Started process 3311 to run task
+[2022-04-29 02:21:06,214] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_csv_task', 'scheduled__2006-01-01T00:00:00+00:00', '--job-id', '628', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpz7q6d3d6', '--error-file', '/tmp/tmpw13mik_h']
+[2022-04-29 02:21:06,217] {standard_task_runner.py:80} INFO - Job 628: Subtask format_xl_to_csv_task
+[2022-04-29 02:21:06,597] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_csv_task scheduled__2006-01-01T00:00:00+00:00 [running]> on host 6fd0ba274d58
+[2022-04-29 02:21:06,874] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-29 02:21:07,079] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_csv_task
+AIRFLOW_CTX_EXECUTION_DATE=2006-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2006-01-01T00:00:00+00:00
+[2022-04-29 02:21:07,088] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 40, in format_xl_to_csv
+    df = pd.read_excel(src_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1192, in __init__
+    content_or_path=path_or_buffer, storage_options=storage_options
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1071, in inspect_excel_format
+    content_or_path, "rb", storage_options=storage_options, is_text=False
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/common.py", line 711, in get_handle
+    handle = open(handle, ioargs.mode)
+FileNotFoundError: [Errno 2] No such file or directory: '/opt/airflow/laucnty06.xlsx'
+[2022-04-29 02:21:07,254] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_csv_task, execution_date=20060101T000000, start_date=20220429T022106, end_date=20220429T022107
+[2022-04-29 02:21:07,322] {standard_task_runner.py:98} ERROR - Failed to execute job 628 for task format_xl_to_csv_task ([Errno 2] No such file or directory: '/opt/airflow/laucnty06.xlsx'; 3311)
+[2022-04-29 02:21:07,355] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-29 02:21:08,188] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

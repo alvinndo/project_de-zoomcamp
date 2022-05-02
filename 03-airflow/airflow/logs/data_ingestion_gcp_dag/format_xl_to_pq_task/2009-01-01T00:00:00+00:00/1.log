@@ -1,0 +1,69 @@
+[2022-05-02 15:59:46,674] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 15:59:46,729] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 15:59:46,731] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:59:46,732] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 15:59:46,734] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:59:46,782] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 2009-01-01 00:00:00+00:00
+[2022-05-02 15:59:46,792] {standard_task_runner.py:52} INFO - Started process 2107 to run task
+[2022-05-02 15:59:46,806] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__2009-01-01T00:00:00+00:00', '--job-id', '1100', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpelthalq7', '--error-file', '/tmp/tmpnnlxu5se']
+[2022-05-02 15:59:46,809] {standard_task_runner.py:77} INFO - Job 1100: Subtask format_xl_to_pq_task
+[2022-05-02 15:59:47,275] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 15:59:47,668] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 15:59:47,891] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=2009-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2009-01-01T00:00:00+00:00
+[2022-05-02 15:59:54,505] {python.py:175} INFO - Done. Returned value was: None
+[2022-05-02 15:59:54,625] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=20090101T000000, start_date=20220502T155946, end_date=20220502T155954
+[2022-05-02 15:59:54,730] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 15:59:55,022] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 16:34:47,021] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:34:47,069] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:34:47,070] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:34:47,072] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:34:47,073] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:34:47,125] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 2009-01-01 00:00:00+00:00
+[2022-05-02 16:34:47,136] {standard_task_runner.py:52} INFO - Started process 6678 to run task
+[2022-05-02 16:34:47,149] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__2009-01-01T00:00:00+00:00', '--job-id', '1208', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp5o414htm', '--error-file', '/tmp/tmp8uha1k3o']
+[2022-05-02 16:34:47,153] {standard_task_runner.py:77} INFO - Job 1208: Subtask format_xl_to_pq_task
+[2022-05-02 16:34:47,542] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:34:47,807] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 16:34:48,073] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=2009-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2009-01-01T00:00:00+00:00
+[2022-05-02 16:34:56,729] {python.py:175} INFO - Done. Returned value was: None
+[2022-05-02 16:34:56,865] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=20090101T000000, start_date=20220502T163447, end_date=20220502T163456
+[2022-05-02 16:34:56,980] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:34:57,278] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 16:50:14,190] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:50:14,235] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:50:14,236] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:50:14,238] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:50:14,239] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:50:14,284] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 2009-01-01 00:00:00+00:00
+[2022-05-02 16:50:14,294] {standard_task_runner.py:52} INFO - Started process 9472 to run task
+[2022-05-02 16:50:14,302] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__2009-01-01T00:00:00+00:00', '--job-id', '1311', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpk3qvjdfs', '--error-file', '/tmp/tmp_y_xi22l']
+[2022-05-02 16:50:14,305] {standard_task_runner.py:77} INFO - Job 1311: Subtask format_xl_to_pq_task
+[2022-05-02 16:50:14,680] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__2009-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:50:14,959] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 16:50:15,155] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=2009-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2009-01-01T00:00:00+00:00
+[2022-05-02 16:50:21,566] {python.py:175} INFO - Done. Returned value was: None
+[2022-05-02 16:50:21,670] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=20090101T000000, start_date=20220502T165014, end_date=20220502T165021
+[2022-05-02 16:50:21,765] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:50:21,997] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,22 @@
+[2022-05-02 16:40:50,393] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.processed_to_gcs_task manual__2022-05-02T16:38:29.679858+00:00 [queued]>
+[2022-05-02 16:40:50,436] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.processed_to_gcs_task manual__2022-05-02T16:38:29.679858+00:00 [queued]>
+[2022-05-02 16:40:50,437] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:40:50,438] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:40:50,440] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:40:50,491] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): processed_to_gcs_task> on 2022-05-02 16:38:29.679858+00:00
+[2022-05-02 16:40:50,505] {standard_task_runner.py:52} INFO - Started process 7931 to run task
+[2022-05-02 16:40:50,514] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'processed_to_gcs_task', 'manual__2022-05-02T16:38:29.679858+00:00', '--job-id', '1248', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmpmn6bqb3v', '--error-file', '/tmp/tmp8xim6e3g']
+[2022-05-02 16:40:50,519] {standard_task_runner.py:77} INFO - Job 1248: Subtask processed_to_gcs_task
+[2022-05-02 16:40:50,862] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.processed_to_gcs_task manual__2022-05-02T16:38:29.679858+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:40:51,336] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=processed_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T16:38:29.679858+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T16:38:29.679858+00:00
+[2022-05-02 16:40:52,404] {python.py:175} INFO - Done. Returned value was: None
+[2022-05-02 16:40:52,507] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_bq_dag, task_id=processed_to_gcs_task, execution_date=20220502T163829, start_date=20220502T164050, end_date=20220502T164052
+[2022-05-02 16:40:52,562] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:40:52,862] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

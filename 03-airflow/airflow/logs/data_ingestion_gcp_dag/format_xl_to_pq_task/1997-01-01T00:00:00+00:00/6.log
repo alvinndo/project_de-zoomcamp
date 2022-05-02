@@ -1,0 +1,36 @@
+[2022-04-25 07:04:40,217] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 07:04:40,257] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 07:04:40,259] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 07:04:40,260] {taskinstance.py:1250} INFO - Starting attempt 6 of 7
+[2022-04-25 07:04:40,261] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 07:04:40,301] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 1997-01-01 00:00:00+00:00
+[2022-04-25 07:04:40,310] {standard_task_runner.py:52} INFO - Started process 1134 to run task
+[2022-04-25 07:04:40,318] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__1997-01-01T00:00:00+00:00', '--job-id', '322', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp_3e0jflx', '--error-file', '/tmp/tmpvaxu69ao']
+[2022-04-25 07:04:40,320] {standard_task_runner.py:80} INFO - Job 322: Subtask format_xl_to_pq_task
+[2022-04-25 07:04:40,653] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [running]> on host 64c7187bd08f
+[2022-04-25 07:04:40,872] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-25 07:04:41,041] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=1997-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1997-01-01T00:00:00+00:00
+[2022-04-25 07:04:45,859] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 49, in format_xl_to_pq
+    pq.write_table(df, src_file.replace('.xlsx', '.parquet'))
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyarrow/parquet.py", line 2018, in write_table
+    where, table.schema,
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/core/generic.py", line 5487, in __getattr__
+    return object.__getattribute__(self, name)
+AttributeError: 'DataFrame' object has no attribute 'schema'
+[2022-04-25 07:04:45,975] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=19970101T000000, start_date=20220425T070440, end_date=20220425T070445
+[2022-04-25 07:04:46,024] {standard_task_runner.py:98} ERROR - Failed to execute job 322 for task format_xl_to_pq_task ('DataFrame' object has no attribute 'schema'; 1134)
+[2022-04-25 07:04:46,074] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-25 07:04:46,414] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

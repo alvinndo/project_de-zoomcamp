@@ -1,0 +1,26 @@
+[2022-05-02 16:56:17,613] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.rename_datasets_task manual__2022-05-02T16:54:02.970723+00:00 [queued]>
+[2022-05-02 16:56:17,658] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.rename_datasets_task manual__2022-05-02T16:54:02.970723+00:00 [queued]>
+[2022-05-02 16:56:17,660] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:56:17,661] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:56:17,662] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:56:17,707] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): rename_datasets_task> on 2022-05-02 16:54:02.970723+00:00
+[2022-05-02 16:56:17,718] {standard_task_runner.py:52} INFO - Started process 10726 to run task
+[2022-05-02 16:56:17,726] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'rename_datasets_task', 'manual__2022-05-02T16:54:02.970723+00:00', '--job-id', '1351', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmpbo6gm67y', '--error-file', '/tmp/tmpbim06if7']
+[2022-05-02 16:56:17,729] {standard_task_runner.py:77} INFO - Job 1351: Subtask rename_datasets_task
+[2022-05-02 16:56:18,090] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.rename_datasets_task manual__2022-05-02T16:54:02.970723+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:56:18,564] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=rename_datasets_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T16:54:02.970723+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T16:54:02.970723+00:00
+[2022-05-02 16:56:18,576] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 16:56:18,580] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'cat /opt/***/data/*.snappy.parquet > /opt/***/data/us_employment.snappy.parquet']
+[2022-05-02 16:56:18,608] {subprocess.py:85} INFO - Output:
+[2022-05-02 16:56:18,697] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 16:56:18,916] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=gcs_to_bq_dag, task_id=rename_datasets_task, execution_date=20220502T165402, start_date=20220502T165617, end_date=20220502T165618
+[2022-05-02 16:56:18,995] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:56:19,263] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

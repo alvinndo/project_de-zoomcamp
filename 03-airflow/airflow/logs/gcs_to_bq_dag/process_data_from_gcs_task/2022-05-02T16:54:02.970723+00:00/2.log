@@ -1,0 +1,26 @@
+[2022-05-02 17:05:16,563] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T16:54:02.970723+00:00 [queued]>
+[2022-05-02 17:05:16,604] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T16:54:02.970723+00:00 [queued]>
+[2022-05-02 17:05:16,605] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 17:05:16,606] {taskinstance.py:1239} INFO - Starting attempt 2 of 3
+[2022-05-02 17:05:16,608] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 17:05:16,648] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): process_data_from_gcs_task> on 2022-05-02 16:54:02.970723+00:00
+[2022-05-02 17:05:16,658] {standard_task_runner.py:52} INFO - Started process 11588 to run task
+[2022-05-02 17:05:16,666] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'process_data_from_gcs_task', 'manual__2022-05-02T16:54:02.970723+00:00', '--job-id', '1359', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmp6id9uw_j', '--error-file', '/tmp/tmp7gubsra6']
+[2022-05-02 17:05:16,669] {standard_task_runner.py:77} INFO - Job 1359: Subtask process_data_from_gcs_task
+[2022-05-02 17:05:17,000] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T16:54:02.970723+00:00 [running]> on host 9f5021834e17
+[2022-05-02 17:05:17,350] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=process_data_from_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T16:54:02.970723+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T16:54:02.970723+00:00
+[2022-05-02 17:13:20,427] {local_task_job.py:212} WARNING - State of this instance has been externally set to success. Terminating instance.
+[2022-05-02 17:13:20,442] {process_utils.py:124} INFO - Sending Signals.SIGTERM to group 11588. PIDs of all processes in the group: [11590, 11588]
+[2022-05-02 17:13:20,445] {process_utils.py:75} INFO - Sending the signal Signals.SIGTERM to group 11588
+[2022-05-02 17:13:20,449] {taskinstance.py:1408} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-02 17:13:20,968] {process_utils.py:70} INFO - Process psutil.Process(pid=11588, status='terminated', exitcode=0, started='17:05:16') (11588) terminated with exit code 0
+[2022-05-02 17:14:20,482] {process_utils.py:138} WARNING - process psutil.Process(pid=11590, name='java', status='sleeping', started='17:05:16') did not respond to SIGTERM. Trying SIGKILL
+[2022-05-02 17:14:20,490] {process_utils.py:75} INFO - Sending the signal Signals.SIGKILL to group 11588
+[2022-05-02 17:14:20,801] {process_utils.py:70} INFO - Process psutil.Process(pid=11590, name='java', status='terminated', started='17:05:16') (11590) terminated with exit code None

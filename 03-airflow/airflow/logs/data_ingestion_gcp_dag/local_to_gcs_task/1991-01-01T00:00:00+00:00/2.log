@@ -1,0 +1,91 @@
+[2022-04-28 03:43:25,319] {taskinstance.py:1037} INFO - Dependencies not met for <TaskInstance: data_ingestion_gcp_dag.local_to_gcs_task scheduled__1991-01-01T00:00:00+00:00 [queued]>, dependency 'Trigger Rule' FAILED: Task's trigger rule 'all_success' requires all upstream tasks to have succeeded, but found 1 non-success(es). upstream_tasks_state={'total': 1, 'successes': 0, 'skipped': 0, 'failed': 0, 'upstream_failed': 0, 'done': 0}, upstream_task_ids={'format_to_parquet_task'}
+[2022-04-28 03:43:25,333] {local_task_job.py:99} INFO - Task is not able to be run
+[2022-04-28 05:47:56,674] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.local_to_gcs_task scheduled__1991-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:47:56,719] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.local_to_gcs_task scheduled__1991-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:47:56,720] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:47:56,722] {taskinstance.py:1250} INFO - Starting attempt 2 of 3
+[2022-04-28 05:47:56,723] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:47:56,768] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): local_to_gcs_task> on 1991-01-01 00:00:00+00:00
+[2022-04-28 05:47:56,777] {standard_task_runner.py:52} INFO - Started process 7270 to run task
+[2022-04-28 05:47:56,785] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'local_to_gcs_task', 'scheduled__1991-01-01T00:00:00+00:00', '--job-id', '468', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpq0gk5ewf', '--error-file', '/tmp/tmpmiv8flmj']
+[2022-04-28 05:47:56,788] {standard_task_runner.py:80} INFO - Job 468: Subtask local_to_gcs_task
+[2022-04-28 05:47:57,156] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.local_to_gcs_task scheduled__1991-01-01T00:00:00+00:00 [running]> on host 65f5b8b3c17c
+[2022-04-28 05:47:57,392] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 05:47:57,582] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=local_to_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=1991-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1991-01-01T00:00:00+00:00
+[2022-04-28 05:47:59,274] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 2594, in upload_from_file
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 2396, in _do_upload
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 1917, in _do_multipart_upload
+    transport, data, object_metadata, content_type, timeout=timeout
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/resumable_media/requests/upload.py", line 154, in transmit
+    retriable_request, self._get_status_code, self._retry_strategy
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/resumable_media/requests/_request_helpers.py", line 147, in wait_and_retry
+    response = func()
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/resumable_media/requests/upload.py", line 149, in retriable_request
+    self._process_response(result)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/resumable_media/_upload.py", line 114, in _process_response
+    _helpers.require_status_code(response, (http.client.OK,), self._get_status_code)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/resumable_media/_helpers.py", line 110, in require_status_code
+    *status_codes
+google.resumable_media.common.InvalidResponse: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 87, in upload_to_gcs
+    blob.upload_from_filename(local_file)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 2735, in upload_from_filename
+    retry=retry,
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 2598, in upload_from_file
+    _raise_from_invalid_response(exc)
+  File "/home/airflow/.local/lib/python3.7/site-packages/google/cloud/storage/blob.py", line 4470, in _raise_from_invalid_response
+    raise exceptions.from_http_status(response.status_code, message, response=response)
+google.api_core.exceptions.Forbidden: 403 POST https://storage.googleapis.com/upload/storage/v1/b/dtc_data_lake_pivotal-surfer-336713/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "The billing account for the owning project is disabled in state closed",
+    "errors": [
+      {
+        "message": "The billing account for the owning project is disabled in state closed",
+        "domain": "global",
+        "reason": "accountDisabled",
+        "locationType": "header",
+        "location": "Authorization"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>)
+[2022-04-28 05:47:59,405] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=local_to_gcs_task, execution_date=19910101T000000, start_date=20220428T054756, end_date=20220428T054759
+[2022-04-28 05:47:59,499] {standard_task_runner.py:98} ERROR - Failed to execute job 468 for task local_to_gcs_task (403 POST https://storage.googleapis.com/upload/storage/v1/b/dtc_data_lake_pivotal-surfer-336713/o?uploadType=multipart: {
+  "error": {
+    "code": 403,
+    "message": "The billing account for the owning project is disabled in state closed",
+    "errors": [
+      {
+        "message": "The billing account for the owning project is disabled in state closed",
+        "domain": "global",
+        "reason": "accountDisabled",
+        "locationType": "header",
+        "location": "Authorization"
+      }
+    ]
+  }
+}
+: ('Request failed with status code', 403, 'Expected one of', <HTTPStatus.OK: 200>); 7270)
+[2022-04-28 05:47:59,515] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-28 05:47:59,764] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

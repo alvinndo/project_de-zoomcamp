@@ -1,0 +1,123 @@
+[2022-05-02 08:01:51,350] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:01:47.155830+00:00 [queued]>
+[2022-05-02 08:01:51,386] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:01:47.155830+00:00 [queued]>
+[2022-05-02 08:01:51,387] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 08:01:51,389] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 08:01:51,390] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 08:01:51,429] {taskinstance.py:1259} INFO - Executing <Task(PythonOperator): process_data_from_gcs_task> on 2022-05-02 08:01:47.155830+00:00
+[2022-05-02 08:01:51,438] {standard_task_runner.py:52} INFO - Started process 10697 to run task
+[2022-05-02 08:01:51,446] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'process_data_from_gcs_task', 'manual__2022-05-02T08:01:47.155830+00:00', '--job-id', '921', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmplhqkxq1j', '--error-file', '/tmp/tmpslkrotrg']
+[2022-05-02 08:01:51,449] {standard_task_runner.py:77} INFO - Job 921: Subtask process_data_from_gcs_task
+[2022-05-02 08:01:51,761] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T08:01:47.155830+00:00 [running]> on host ae42322ae538
+[2022-05-02 08:01:52,155] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=process_data_from_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T08:01:47.155830+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T08:01:47.155830+00:00
+[2022-05-02 08:03:11,504] {local_task_job.py:212} WARNING - State of this instance has been externally set to failed. Terminating instance.
+[2022-05-02 08:03:11,516] {process_utils.py:124} INFO - Sending Signals.SIGTERM to group 10697. PIDs of all processes in the group: [10699, 10697]
+[2022-05-02 08:03:11,519] {process_utils.py:75} INFO - Sending the signal Signals.SIGTERM to group 10697
+[2022-05-02 08:03:11,522] {taskinstance.py:1408} ERROR - Received SIGTERM. Terminating subprocesses.
+[2022-05-02 08:03:11,524] {clientserver.py:502} INFO - Error while receiving.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1410, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2022-05-02 08:03:11,530] {clientserver.py:507} INFO - Closing down clientserver connection
+[2022-05-02 08:03:11,532] {java_gateway.py:1056} ERROR - Exception while sending command.
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 475, in send_command
+    answer = smart_decode(self.stream.readline()[:-1])
+  File "/usr/local/lib/python3.7/socket.py", line 589, in readinto
+    return self._sock.recv_into(b)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1410, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1038, in send_command
+    response = connection.send_command(command)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/clientserver.py", line 504, in send_command
+    "Error while sending or receiving", e, proto.ERROR_ON_RECEIVE)
+py4j.protocol.Py4JNetworkError: Error while sending or receiving
+[2022-05-02 08:03:11,542] {taskinstance.py:1700} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq_task.py", line 100, in process_data
+    mapping_expr = create_map([lit(x) for x in chain(*states.items())])
+  File "/opt/airflow/dags/gcs_to_bq_task.py", line 100, in <listcomp>
+    mapping_expr = create_map([lit(x) for x in chain(*states.items())])
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/functions.py", line 100, in lit
+    return col if isinstance(col, Column) else _invoke_function("lit", col)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/functions.py", line 58, in _invoke_function
+    return Column(jf(*args))
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/protocol.py", line 336, in get_return_value
+    format(target_id, ".", name))
+py4j.protocol.Py4JError: An error occurred while calling z:org.apache.spark.sql.functions.lit
+[2022-05-02 08:03:11,667] {taskinstance.py:1277} INFO - Marking task as FAILED. dag_id=gcs_to_bq_dag, task_id=process_data_from_gcs_task, execution_date=20220502T080147, start_date=20220502T080151, end_date=20220502T080311
+[2022-05-02 08:03:11,724] {standard_task_runner.py:92} ERROR - Failed to execute job 921 for task process_data_from_gcs_task
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/task/task_runner/standard_task_runner.py", line 85, in _start_by_fork
+    args.func(args, dag=self.dag)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/cli_parser.py", line 48, in command
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/cli.py", line 92, in wrapper
+    return f(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 298, in task_run
+    _run_task_by_selected_method(args, dag, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 107, in _run_task_by_selected_method
+    _run_raw_task(args, ti)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/cli/commands/task_command.py", line 184, in _run_raw_task
+    error_file=args.error_file,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 70, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1329, in _run_raw_task
+    self._execute_task_with_callbacks(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1455, in _execute_task_with_callbacks
+    result = self._execute_task(context, self.task)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1511, in _execute_task
+    result = execute_callable(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 185, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq_task.py", line 100, in process_data
+    mapping_expr = create_map([lit(x) for x in chain(*states.items())])
+  File "/opt/airflow/dags/gcs_to_bq_task.py", line 100, in <listcomp>
+    mapping_expr = create_map([lit(x) for x in chain(*states.items())])
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/functions.py", line 100, in lit
+    return col if isinstance(col, Column) else _invoke_function("lit", col)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/functions.py", line 58, in _invoke_function
+    return Column(jf(*args))
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/java_gateway.py", line 1322, in __call__
+    answer, self.gateway_client, self.target_id, self.name)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/sql/utils.py", line 111, in deco
+    return f(*a, **kw)
+  File "/home/airflow/.local/lib/python3.7/site-packages/py4j/protocol.py", line 336, in get_return_value
+    format(target_id, ".", name))
+py4j.protocol.Py4JError: An error occurred while calling z:org.apache.spark.sql.functions.lit
+[2022-05-02 08:03:12,065] {process_utils.py:70} INFO - Process psutil.Process(pid=10697, status='terminated', exitcode=1, started='08:01:50') (10697) terminated with exit code 1
+[2022-05-02 08:04:11,528] {process_utils.py:138} WARNING - process psutil.Process(pid=10699, name='java', status='sleeping', started='08:01:51') did not respond to SIGTERM. Trying SIGKILL
+[2022-05-02 08:04:11,537] {process_utils.py:75} INFO - Sending the signal Signals.SIGKILL to group 10697
+[2022-05-02 08:04:11,927] {process_utils.py:70} INFO - Process psutil.Process(pid=10699, name='java', status='terminated', started='08:01:51') (10699) terminated with exit code None

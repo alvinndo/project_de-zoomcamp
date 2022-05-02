@@ -1,0 +1,243 @@
+[2022-04-25 05:58:54,800] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 05:58:54,854] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 05:58:54,856] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 05:58:54,857] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-25 05:58:54,859] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 05:58:54,908] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-04-25 05:58:54,917] {standard_task_runner.py:52} INFO - Started process 716 to run task
+[2022-04-25 05:58:54,924] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '287', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmphzvpfc1l', '--error-file', '/tmp/tmp7pkjrx7_']
+[2022-04-25 05:58:54,927] {standard_task_runner.py:80} INFO - Job 287: Subtask download_dataset_task
+[2022-04-25 05:58:55,348] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host d74937eb3452
+[2022-04-25 05:58:55,620] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-25 05:58:55,799] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-25 05:58:55,803] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-25 05:58:55,805] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***//laucnty98.xlsx']
+[2022-04-25 05:58:55,817] {subprocess.py:85} INFO - Output:
+[2022-04-25 05:58:56,223] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-25 05:58:56,419] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220425T055854, end_date=20220425T055856
+[2022-04-25 05:58:56,505] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-25 05:58:56,712] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-28 05:21:35,962] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:21:36,012] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:21:36,014] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:21:36,016] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-28 05:21:36,018] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:21:36,071] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-04-28 05:21:36,085] {standard_task_runner.py:52} INFO - Started process 4725 to run task
+[2022-04-28 05:21:36,107] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '428', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpfsykfnpj', '--error-file', '/tmp/tmpp6blmmqq']
+[2022-04-28 05:21:36,113] {standard_task_runner.py:80} INFO - Job 428: Subtask download_dataset_task
+[2022-04-28 05:21:36,517] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 65f5b8b3c17c
+[2022-04-28 05:21:36,763] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 05:21:36,952] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-28 05:21:36,956] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-28 05:21:36,958] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-04-28 05:21:36,977] {subprocess.py:85} INFO - Output:
+[2022-04-28 05:21:37,988] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-28 05:21:38,202] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220428T052135, end_date=20220428T052138
+[2022-04-28 05:21:38,293] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 05:21:38,560] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-04-28 06:03:52,811] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:03:52,852] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:03:52,854] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:03:52,855] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-28 06:03:52,856] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:03:52,902] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-04-28 06:03:52,911] {standard_task_runner.py:52} INFO - Started process 1467 to run task
+[2022-04-28 06:03:52,920] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '512', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpa1s_h6kp', '--error-file', '/tmp/tmp11c48cr2']
+[2022-04-28 06:03:52,924] {standard_task_runner.py:80} INFO - Job 512: Subtask download_dataset_task
+[2022-04-28 06:03:53,282] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host d4721d223bdd
+[2022-04-28 06:03:53,652] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 06:03:53,912] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-28 06:03:53,918] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-28 06:03:53,921] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-04-28 06:03:53,938] {subprocess.py:85} INFO - Output:
+[2022-04-28 06:03:54,570] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-28 06:03:54,876] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220428T060352, end_date=20220428T060354
+[2022-04-28 06:03:54,952] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 06:03:55,269] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-04-29 02:33:49,841] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:33:49,895] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-04-29 02:33:49,897] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:33:49,899] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-29 02:33:49,900] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-29 02:33:49,955] {taskinstance.py:1270} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-04-29 02:33:49,967] {standard_task_runner.py:52} INFO - Started process 5032 to run task
+[2022-04-29 02:33:49,976] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '692', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp2nfxyhzu', '--error-file', '/tmp/tmp3f2x2dt1']
+[2022-04-29 02:33:49,982] {standard_task_runner.py:80} INFO - Job 692: Subtask download_dataset_task
+[2022-04-29 02:33:50,434] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 6fd0ba274d58
+[2022-04-29 02:33:50,802] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-29 02:33:51,016] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-04-29 02:33:51,021] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-04-29 02:33:51,023] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-04-29 02:33:51,045] {subprocess.py:85} INFO - Output:
+[2022-04-29 02:33:52,315] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-04-29 02:33:52,529] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220429T023349, end_date=20220429T023352
+[2022-04-29 02:33:52,591] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-29 02:33:52,868] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 07:53:44,766] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 07:53:44,808] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 07:53:44,810] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 07:53:44,811] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 07:53:44,812] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 07:53:44,851] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-05-02 07:53:44,860] {standard_task_runner.py:52} INFO - Started process 9036 to run task
+[2022-05-02 07:53:44,867] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '846', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpa8ruv2se', '--error-file', '/tmp/tmpftlmr9xx']
+[2022-05-02 07:53:44,870] {standard_task_runner.py:77} INFO - Job 846: Subtask download_dataset_task
+[2022-05-02 07:53:45,242] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host ae42322ae538
+[2022-05-02 07:53:45,484] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 07:53:45,656] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-05-02 07:53:45,661] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 07:53:45,663] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-05-02 07:53:45,678] {subprocess.py:85} INFO - Output:
+[2022-05-02 07:53:46,073] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 07:53:46,271] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220502T075344, end_date=20220502T075346
+[2022-05-02 07:53:46,367] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 07:53:46,686] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 09:15:36,528] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 09:15:36,569] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 09:15:36,571] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 09:15:36,572] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 09:15:36,574] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 09:15:36,617] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-05-02 09:15:36,627] {standard_task_runner.py:52} INFO - Started process 2292 to run task
+[2022-05-02 09:15:36,635] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '965', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp0ixxqcmy', '--error-file', '/tmp/tmpnxo9v4k7']
+[2022-05-02 09:15:36,639] {standard_task_runner.py:77} INFO - Job 965: Subtask download_dataset_task
+[2022-05-02 09:15:37,005] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 98c324cf1bb6
+[2022-05-02 09:15:37,257] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 09:15:37,443] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-05-02 09:15:37,447] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 09:15:37,449] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-05-02 09:15:37,467] {subprocess.py:85} INFO - Output:
+[2022-05-02 09:15:37,898] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 09:15:38,102] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220502T091536, end_date=20220502T091538
+[2022-05-02 09:15:38,184] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 09:15:38,623] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 15:56:55,523] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 15:56:55,569] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 15:56:55,571] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:56:55,573] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 15:56:55,575] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 15:56:55,622] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-05-02 15:56:55,633] {standard_task_runner.py:52} INFO - Started process 1462 to run task
+[2022-05-02 15:56:55,647] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '1066', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpozj3ljps', '--error-file', '/tmp/tmpsfqxvq63']
+[2022-05-02 15:56:55,652] {standard_task_runner.py:77} INFO - Job 1066: Subtask download_dataset_task
+[2022-05-02 15:56:56,042] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 15:56:56,298] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 15:56:56,486] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-05-02 15:56:56,492] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 15:56:56,495] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-05-02 15:56:56,511] {subprocess.py:85} INFO - Output:
+[2022-05-02 15:56:56,919] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 15:56:57,128] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220502T155655, end_date=20220502T155657
+[2022-05-02 15:56:57,220] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 15:56:57,485] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 16:31:54,252] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:31:54,306] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:31:54,308] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:31:54,310] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:31:54,312] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:31:54,383] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-05-02 16:31:54,398] {standard_task_runner.py:52} INFO - Started process 6025 to run task
+[2022-05-02 16:31:54,413] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '1173', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpn9iplkba', '--error-file', '/tmp/tmpp7yr43e5']
+[2022-05-02 16:31:54,418] {standard_task_runner.py:77} INFO - Job 1173: Subtask download_dataset_task
+[2022-05-02 16:31:54,874] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:31:55,140] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 16:31:55,439] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-05-02 16:31:55,446] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 16:31:55,450] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-05-02 16:31:55,472] {subprocess.py:85} INFO - Output:
+[2022-05-02 16:31:55,916] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 16:31:56,133] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220502T163154, end_date=20220502T163156
+[2022-05-02 16:31:56,210] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:31:56,708] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-05-02 16:47:21,436] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:47:21,479] {taskinstance.py:1032} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [queued]>
+[2022-05-02 16:47:21,481] {taskinstance.py:1238} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:47:21,482] {taskinstance.py:1239} INFO - Starting attempt 1 of 2
+[2022-05-02 16:47:21,483] {taskinstance.py:1240} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 16:47:21,524] {taskinstance.py:1259} INFO - Executing <Task(BashOperator): download_dataset_task> on 1998-01-01 00:00:00+00:00
+[2022-05-02 16:47:21,535] {standard_task_runner.py:52} INFO - Started process 8817 to run task
+[2022-05-02 16:47:21,542] {standard_task_runner.py:76} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'download_dataset_task', 'scheduled__1998-01-01T00:00:00+00:00', '--job-id', '1277', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmpq1x2tpzu', '--error-file', '/tmp/tmprbj2cgq_']
+[2022-05-02 16:47:21,545] {standard_task_runner.py:77} INFO - Job 1277: Subtask download_dataset_task
+[2022-05-02 16:47:21,912] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.download_dataset_task scheduled__1998-01-01T00:00:00+00:00 [running]> on host 9f5021834e17
+[2022-05-02 16:47:22,364] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:152 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-05-02 16:47:22,549] {taskinstance.py:1426} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=download_dataset_task
+AIRFLOW_CTX_EXECUTION_DATE=1998-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1998-01-01T00:00:00+00:00
+[2022-05-02 16:47:22,554] {subprocess.py:62} INFO - Tmp dir root location: 
+ /tmp
+[2022-05-02 16:47:22,557] {subprocess.py:74} INFO - Running command: ['bash', '-c', 'curl -sSLf https://www.bls.gov/lau/laucnty98.xlsx > /opt/***/laucnty98.xlsx']
+[2022-05-02 16:47:22,583] {subprocess.py:85} INFO - Output:
+[2022-05-02 16:47:23,080] {subprocess.py:93} INFO - Command exited with return code 0
+[2022-05-02 16:47:23,284] {taskinstance.py:1277} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=download_dataset_task, execution_date=19980101T000000, start_date=20220502T164721, end_date=20220502T164723
+[2022-05-02 16:47:23,369] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-05-02 16:47:23,632] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

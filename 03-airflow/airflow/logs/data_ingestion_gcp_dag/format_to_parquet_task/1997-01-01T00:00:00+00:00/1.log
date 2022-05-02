@@ -1,0 +1,63 @@
+[2022-04-28 05:16:20,124] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:16:20,174] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 05:16:20,176] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:16:20,178] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-28 05:16:20,180] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 05:16:20,242] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 1997-01-01 00:00:00+00:00
+[2022-04-28 05:16:20,253] {standard_task_runner.py:52} INFO - Started process 4268 to run task
+[2022-04-28 05:16:20,265] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_to_parquet_task', 'scheduled__1997-01-01T00:00:00+00:00', '--job-id', '424', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp9ew64dc5', '--error-file', '/tmp/tmpnuz0q7hq']
+[2022-04-28 05:16:20,269] {standard_task_runner.py:80} INFO - Job 424: Subtask format_to_parquet_task
+[2022-04-28 05:16:20,748] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [running]> on host 65f5b8b3c17c
+[2022-04-28 05:16:21,016] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 05:16:21,219] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=1997-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1997-01-01T00:00:00+00:00
+[2022-04-28 05:16:21,232] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 65, in format_to_parquet
+    table = pcsv.read_csv(src_file)
+  File "pyarrow/_csv.pyx", line 881, in pyarrow._csv.read_csv
+  File "pyarrow/_csv.pyx", line 774, in pyarrow._csv._get_reader
+  File "pyarrow/io.pxi", line 1631, in pyarrow.lib.get_input_stream
+  File "pyarrow/io.pxi", line 1602, in pyarrow.lib.get_native_file
+  File "pyarrow/io.pxi", line 896, in pyarrow.lib.OSFile.__cinit__
+  File "pyarrow/io.pxi", line 906, in pyarrow.lib.OSFile._open_readable
+  File "pyarrow/error.pxi", line 143, in pyarrow.lib.pyarrow_internal_check_status
+  File "pyarrow/error.pxi", line 112, in pyarrow.lib.check_status
+FileNotFoundError: [Errno 2] Failed to open local file '/opt/airflow/us_employment_97.csv'. Detail: [errno 2] No such file or directory
+[2022-04-28 05:16:21,349] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=format_to_parquet_task, execution_date=19970101T000000, start_date=20220428T051620, end_date=20220428T051621
+[2022-04-28 05:16:21,399] {standard_task_runner.py:98} ERROR - Failed to execute job 424 for task format_to_parquet_task ([Errno 2] Failed to open local file '/opt/airflow/us_employment_97.csv'. Detail: [errno 2] No such file or directory; 4268)
+[2022-04-28 05:16:21,445] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-28 05:16:21,983] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2022-04-28 06:03:29,177] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:03:29,220] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-28 06:03:29,222] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:03:29,224] {taskinstance.py:1250} INFO - Starting attempt 1 of 2
+[2022-04-28 06:03:29,225] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-28 06:03:29,268] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_to_parquet_task> on 1997-01-01 00:00:00+00:00
+[2022-04-28 06:03:29,278] {standard_task_runner.py:52} INFO - Started process 1374 to run task
+[2022-04-28 06:03:29,286] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_to_parquet_task', 'scheduled__1997-01-01T00:00:00+00:00', '--job-id', '507', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmppygjt8tf', '--error-file', '/tmp/tmppj_zoam2']
+[2022-04-28 06:03:29,289] {standard_task_runner.py:80} INFO - Job 507: Subtask format_to_parquet_task
+[2022-04-28 06:03:29,659] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_to_parquet_task scheduled__1997-01-01T00:00:00+00:00 [running]> on host d4721d223bdd
+[2022-04-28 06:03:29,911] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-28 06:03:30,095] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_to_parquet_task
+AIRFLOW_CTX_EXECUTION_DATE=1997-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1997-01-01T00:00:00+00:00
+[2022-04-28 06:03:30,432] {python.py:175} INFO - Done. Returned value was: None
+[2022-04-28 06:03:30,555] {taskinstance.py:1288} INFO - Marking task as SUCCESS. dag_id=data_ingestion_gcp_dag, task_id=format_to_parquet_task, execution_date=19970101T000000, start_date=20220428T060329, end_date=20220428T060330
+[2022-04-28 06:03:30,709] {local_task_job.py:154} INFO - Task exited with return code 0
+[2022-04-28 06:03:31,021] {local_task_job.py:264} INFO - 1 downstream tasks scheduled from follow-on schedule check

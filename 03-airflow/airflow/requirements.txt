@@ -1,0 +1,6 @@
+apache-airflow-providers-google
+pyarrow
+pyspark
+pandas
+openpyxl
+apache-airflow-providers-apache-spark

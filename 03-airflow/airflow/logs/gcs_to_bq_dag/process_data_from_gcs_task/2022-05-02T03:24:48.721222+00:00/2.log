@@ -1,0 +1,37 @@
+[2022-05-02 03:30:00,089] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T03:24:48.721222+00:00 [queued]>
+[2022-05-02 03:30:00,127] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T03:24:48.721222+00:00 [queued]>
+[2022-05-02 03:30:00,129] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 03:30:00,130] {taskinstance.py:1250} INFO - Starting attempt 2 of 2
+[2022-05-02 03:30:00,131] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-05-02 03:30:00,172] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): process_data_from_gcs_task> on 2022-05-02 03:24:48.721222+00:00
+[2022-05-02 03:30:00,181] {standard_task_runner.py:52} INFO - Started process 2979 to run task
+[2022-05-02 03:30:00,189] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'gcs_to_bq_dag', 'process_data_from_gcs_task', 'manual__2022-05-02T03:24:48.721222+00:00', '--job-id', '800', '--raw', '--subdir', 'DAGS_FOLDER/gcs_to_bq_task.py', '--cfg-path', '/tmp/tmp8hxodaqt', '--error-file', '/tmp/tmpoizos5be']
+[2022-05-02 03:30:00,192] {standard_task_runner.py:80} INFO - Job 800: Subtask process_data_from_gcs_task
+[2022-05-02 03:30:00,519] {logging_mixin.py:109} INFO - Running <TaskInstance: gcs_to_bq_dag.process_data_from_gcs_task manual__2022-05-02T03:24:48.721222+00:00 [running]> on host d2890025310b
+[2022-05-02 03:30:00,896] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=gcs_to_bq_dag
+AIRFLOW_CTX_TASK_ID=process_data_from_gcs_task
+AIRFLOW_CTX_EXECUTION_DATE=2022-05-02T03:24:48.721222+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2022-05-02T03:24:48.721222+00:00
+[2022-05-02 03:30:01,249] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/gcs_to_bq_task.py", line 87, in process_data
+    sc = SparkContext(conf=conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 144, in __init__
+    SparkContext._ensure_initialized(self, gateway=gateway, conf=conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/context.py", line 339, in _ensure_initialized
+    SparkContext._gateway = gateway or launch_gateway(conf)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pyspark/java_gateway.py", line 108, in launch_gateway
+    raise RuntimeError("Java gateway process exited before sending its port number")
+RuntimeError: Java gateway process exited before sending its port number
+[2022-05-02 03:30:01,363] {taskinstance.py:1288} INFO - Marking task as FAILED. dag_id=gcs_to_bq_dag, task_id=process_data_from_gcs_task, execution_date=20220502T032448, start_date=20220502T033000, end_date=20220502T033001
+[2022-05-02 03:30:01,413] {standard_task_runner.py:98} ERROR - Failed to execute job 800 for task process_data_from_gcs_task (Java gateway process exited before sending its port number; 2979)
+[2022-05-02 03:30:01,453] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-05-02 03:30:01,716] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check

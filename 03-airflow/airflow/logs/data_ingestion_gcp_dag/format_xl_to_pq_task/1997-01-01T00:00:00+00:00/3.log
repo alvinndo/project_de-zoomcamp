@@ -1,0 +1,42 @@
+[2022-04-25 06:48:08,664] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 06:48:08,702] {taskinstance.py:1043} INFO - Dependencies all met for <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [queued]>
+[2022-04-25 06:48:08,703] {taskinstance.py:1249} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 06:48:08,705] {taskinstance.py:1250} INFO - Starting attempt 3 of 4
+[2022-04-25 06:48:08,706] {taskinstance.py:1251} INFO - 
+--------------------------------------------------------------------------------
+[2022-04-25 06:48:08,749] {taskinstance.py:1270} INFO - Executing <Task(PythonOperator): format_xl_to_pq_task> on 1997-01-01 00:00:00+00:00
+[2022-04-25 06:48:08,759] {standard_task_runner.py:52} INFO - Started process 619 to run task
+[2022-04-25 06:48:08,767] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'data_ingestion_gcp_dag', 'format_xl_to_pq_task', 'scheduled__1997-01-01T00:00:00+00:00', '--job-id', '316', '--raw', '--subdir', 'DAGS_FOLDER/ingest_to_gcs_dag.py', '--cfg-path', '/tmp/tmp8qhub4jn', '--error-file', '/tmp/tmpamxcvuxx']
+[2022-04-25 06:48:08,769] {standard_task_runner.py:80} INFO - Job 316: Subtask format_xl_to_pq_task
+[2022-04-25 06:48:09,122] {logging_mixin.py:109} INFO - Running <TaskInstance: data_ingestion_gcp_dag.format_xl_to_pq_task scheduled__1997-01-01T00:00:00+00:00 [running]> on host 53282612bf53
+[2022-04-25 06:48:09,345] {logging_mixin.py:109} WARNING - /home/***/.local/lib/python3.7/site-packages/***/utils/context.py:156 AirflowContextDeprecationWarning: Accessing 'execution_date' from the template is deprecated and will be removed in a future version. Please use 'data_interval_start' or 'logical_date' instead.
+[2022-04-25 06:48:09,514] {taskinstance.py:1448} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=data_ingestion_gcp_dag
+AIRFLOW_CTX_TASK_ID=format_xl_to_pq_task
+AIRFLOW_CTX_EXECUTION_DATE=1997-01-01T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__1997-01-01T00:00:00+00:00
+[2022-04-25 06:48:09,526] {taskinstance.py:1774} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 174, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 188, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/ingest_to_gcs_dag.py", line 36, in format_xl_to_pq
+    df = pd.DataFrame(pd.read_excel(src_file))
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/util/_decorators.py", line 311, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 364, in read_excel
+    io = ExcelFile(io, storage_options=storage_options, engine=engine)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_base.py", line 1233, in __init__
+    self._reader = self._engines[engine](self._io, storage_options=storage_options)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/io/excel/_openpyxl.py", line 521, in __init__
+    import_optional_dependency("openpyxl")
+  File "/home/airflow/.local/lib/python3.7/site-packages/pandas/compat/_optional.py", line 118, in import_optional_dependency
+    raise ImportError(msg) from None
+ImportError: Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.
+[2022-04-25 06:48:09,635] {taskinstance.py:1288} INFO - Marking task as UP_FOR_RETRY. dag_id=data_ingestion_gcp_dag, task_id=format_xl_to_pq_task, execution_date=19970101T000000, start_date=20220425T064808, end_date=20220425T064809
+[2022-04-25 06:48:09,679] {standard_task_runner.py:98} ERROR - Failed to execute job 316 for task format_xl_to_pq_task (Missing optional dependency 'openpyxl'.  Use pip or conda to install openpyxl.; 619)
+[2022-04-25 06:48:09,709] {local_task_job.py:154} INFO - Task exited with return code 1
+[2022-04-25 06:48:09,942] {local_task_job.py:264} INFO - 0 downstream tasks scheduled from follow-on schedule check
