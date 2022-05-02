@@ -1,4 +1,4 @@
-# 🇺🇸 Employment/Unemployment Data in the US since 1990 🇺🇸
+# 🇺🇸  Employment/Unemployment Data in the US since 1990
 
 # Data Engineering Zoomcamp Final Capstone Project
 🟢 This capstone project was taught by [DataTalksClub](https://datatalks.club/). A big thank you to instructors [Alexey Grigorev](https://www.linkedin.com/in/agrigorev/), [Sejal Vaidya](https://www.linkedin.com/in/vaidyasejal/), [Victoria Perez Mola](https://www.linkedin.com/in/victoriaperezmola/), and [Ankush Khanna](https://www.linkedin.com/in/ankushkhanna2/) for their time and effort leading this course!
@@ -71,5 +71,6 @@ In the screenshot below:
 
 Below is a screenshot of my [dashboard](https://datastudio.google.com/reporting/086e2c44-85a5-4ce8-b8ee-98be102a0b6c).
 ![alt text](./img/dashboard.png)
+* **NOTE**: To speed up the process of the dashboard, on the dropdowns on the top-right, **UNCHECK** the blanks in `State` and `year`. (I'll have to fix that!)
 
 Thank you again to everyone for their dedication and support! If you have any questions, please feel free to open a PR or send me an email. Bless!
