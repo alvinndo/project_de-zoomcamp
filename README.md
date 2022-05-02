@@ -6,7 +6,7 @@
 🟢 You can learn Data Engineering topics on your own time [here](https://github.com/DataTalksClub/data-engineering-zoomcamp) and follow along with the [video lectures](https://www.youtube.com/playlist?list=PL3MmuxUbc_hJed7dXYoJw8DoCuVHhGEQb) on YouTube!
 
 # Problem Description
-The goal of this project is to track historical US employment data (1990-Present). The source of the datasets I've used were from the Bureau Labor of Statistics (source: [BLS](https://www.bls.gov/lau/)). This dataset includes data down to each counties in each state in the US to view things more precisely residentially.
+The goal of this project is to track historical US employment data (1990-Present). The source of the datasets I've used were from the Bureau Labor of Statistics (source: [BLS](https://www.bls.gov/lau/)). This dataset includes data down to each counties in each state in the US to view things more precisely residentially. This can be a good tool to use if you are looking to move to a new area and would like to research about the job market in the area.
 
 ![alt text](./img/usa-county-map1000x760.jpeg)
 
