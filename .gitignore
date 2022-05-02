@@ -5,3 +5,6 @@
 
 # From 02-terraform
 02-terraform/.terraform
+
+# From 03-airflow
+03-airflow/airflow/logs/
